@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: batchgenerators
-  version: "0.25.1"
+  version: 0.25.2
 
 package:
   name: ${{ name|lower }}
@@ -10,12 +10,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/batchgenerators-${{ version }}.tar.gz
-  sha256: 4663a7f393bf1681d7675648362ba3f11b2a9474fb17228a92aac5d1ad28bb39
+  sha256: ae7753f9b23626979988ec4f253dc4dfbb4f35ed520f4c4d5f6db480202039a1
   patches:
     - python3.patch  # Based on https://github.com/MIC-DKFZ/batchgenerators/pull/130
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -34,7 +34,7 @@ requirements:
     - future
     - pandas
     - threadpoolctl
-
+    - unittest2
 tests:
   - python:
       imports:
