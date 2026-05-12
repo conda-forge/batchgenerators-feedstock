@@ -34,7 +34,7 @@ requirements:
     - future
     - pandas
     - threadpoolctl
-    - unittest2
+
 tests:
   - python:
       imports:
