@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: batchgenerators
-  version: 0.25.2
+  version: 0.25.3
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/batchgenerators-${{ version }}.tar.gz
-  sha256: ae7753f9b23626979988ec4f253dc4dfbb4f35ed520f4c4d5f6db480202039a1
+  sha256: fa69448c4bb119b175820f85eeaeea81d95f599a09da654d8cff22942088f42d
   patches:
     - python3.patch  # Based on https://github.com/MIC-DKFZ/batchgenerators/pull/130
 
