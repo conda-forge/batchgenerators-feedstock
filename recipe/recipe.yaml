@@ -11,8 +11,6 @@ package:
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/batchgenerators-${{ version }}.tar.gz
   sha256: 6aabe8c3179410200b9a202d1a7c1699bd8a0633378af7656d4c452c2f1a1c35
-  patches:
-    - python3.patch  # Based on https://github.com/MIC-DKFZ/batchgenerators/pull/130
 
 build:
   number: 0
