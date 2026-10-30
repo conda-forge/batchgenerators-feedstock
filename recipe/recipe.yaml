@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: batchgenerators
-  version: 0.25.5
+  version: 0.25.6
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/batchgenerators-${{ version }}.tar.gz
-  sha256: f52a8a610203ece191f5548442b345f52f5f5493a08107bfbddad132f52f6f35
+  sha256: 6aabe8c3179410200b9a202d1a7c1699bd8a0633378af7656d4c452c2f1a1c35
   patches:
     - python3.patch  # Based on https://github.com/MIC-DKFZ/batchgenerators/pull/130
 
@@ -27,11 +27,10 @@ requirements:
   run:
     - python >=${{ python_min }}
     - pillow >=7.1.2
-    - numpy >=1.10.2
+    - numpy >=1.17
     - scipy
     - scikit-image
     - scikit-learn
-    - future
     - pandas
     - threadpoolctl
 tests:
@@ -39,9 +38,9 @@ tests:
       imports:
         - batchgenerators
       pip_check: true
-      python_version: 
+      python_version:
         - ${{ python_min }}
-        - "*"
+        - '*'
 
 about:
   summary: Data augmentation toolkit
